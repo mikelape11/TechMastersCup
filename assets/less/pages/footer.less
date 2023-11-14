@@ -1,0 +1,19 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: @footer-height;
+    background: @greyDarkest;
+    gap: 0.5rem;
+
+    &__copy {
+        .font-size(1.4);
+        color: @white;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            .font-size(1.6);
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.section {
+    min-height: ~"calc(100dvh - @{header-height} - (@{banner-mobile-height}*2) - 1px - @{menu-height} - @{footer-height})";        
+
+    @media (min-width: 768px) {
+        min-height: ~"calc(100dvh - @{header-height} - (@{banner-tablet-height}*2) - 1px- @{menu-height} - @{footer-height})";        
+    }
+    @media (min-width: 1024px) {
+        min-height: ~"calc(100dvh - @{header-height} - (@{banner-height}*2) - 1px - @{menu-height} - @{footer-height})";        
+    }
+}

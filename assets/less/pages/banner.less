@@ -1,0 +1,52 @@
+.banner {
+    padding: @banner-mobile-height 0;
+    background-image: url('../images/Background/Banner.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    @media (min-width: 768px) {
+        padding: @banner-tablet-height 0;
+    }
+
+    @media (min-width: 1024px) {
+        padding: @banner-height 0;
+    }
+
+    &__link {
+        width: 8.5rem;
+        height: 4rem;
+        background: rgba(@greyDarkest, 50%);
+        border-radius: 0.8rem 0 0 0.8rem;
+        position: absolute;
+        top: 60%;
+        right: 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 1rem;
+        
+        @media (min-width: 768px) {
+            padding-left: 2rem;
+            top: 65%;
+            width: 14rem;
+            height: 4.5rem;
+        }
+    
+        &:hover {
+            border-top: 1px solid @grey;
+            border-left: 1px solid @grey;
+            border-bottom: 1px solid @grey;
+        }
+    }
+
+    &__img {
+        width: 6.5rem;
+
+        @media (min-width: 768px) {
+            width: 8rem;
+        }
+    }
+}

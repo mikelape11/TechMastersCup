@@ -1,0 +1,356 @@
+.playoffs {
+    background-image: url('../images/Background/BackgroundPlayoffs.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0 3rem;
+    min-width: 0;
+    overflow-y: hidden;
+    overflow-x: auto;
+    position: relative;
+    display: none;
+
+    &__mobile {
+        display: flex !important;
+
+        @media(min-width: 768px){
+            display: none !important;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        padding: 3rem;
+        flex-direction: row;
+        margin: 0 auto;
+        height: 100dvh;
+        min-height: 85rem;
+        background-position: fixed;
+        padding: 0 4rem;
+        display: flex;
+    }
+
+    @media (min-width: 1248px) {
+        padding: 0 6rem;
+    }
+
+
+    &__column {
+        padding: 3rem 2rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem 0;
+        
+        @media(min-width: 768px) {
+            padding: 6rem 0;
+            min-height: 85rem;
+            height: 100dvh;
+            min-width: 14rem;
+            width: ~"calc((100%/7) - 3.5rem)";
+        }
+
+        &__final {
+            width: ~"calc((100%/7))";
+        }
+
+        &__third {
+            display: flex;
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        &:nth-child(1), &:nth-child(7){
+            .playoffs__list {
+                .playoffs__item {
+                    .playoffs__match {
+                        &:before, &:after {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 1.8rem;
+        color: @white;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        &__third {
+            font-size: 1.6rem;
+            margin: auto;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+    }
+
+    &__list {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        margin: 1.5rem 0;
+        position: relative;
+        gap: 3rem 2rem;
+        min-width: 0;
+
+        @media(min-width: 768px) {
+            gap: 0;
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex: 0 1 auto;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        background: transparent;
+        display: flex;
+        width: 23rem;
+
+        @media (min-width: 768px) {
+            width: auto;
+        } 
+
+        &--final, &--third {
+            &:after {
+                display: none !important;
+            }
+        }
+
+        &--final {
+            // transform: scale(1.1);
+        }
+
+        &--third {
+            .playoffs__match:before, .playoffs__match:after {
+                display: none !important;
+            }
+        }
+
+        &__sf:after {
+            display: none !important;
+        }
+   
+        &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 1.5rem;
+            height: 50%;
+
+            .playoffs__column__left &{
+                border-right: 2px solid @primary-light;
+                right: -1.7rem;
+            }
+
+            .playoffs__column__right &{
+                border-left: 2px solid @primary-light;
+                left: -1.7rem;
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &:nth-child(odd):after {
+            top: 50%;
+            border-top: 2px solid @primary-light;
+            transform: translateY(-1px);
+            // border-top-right-radius: 0.6em;
+        }
+
+        &:nth-child(even):after {
+            bottom: 50%;
+            border-bottom: 2px solid @primary-light;
+            transform: translateY(1px);
+            // border-bottom-right-radius: 0.6em;
+        }
+
+        &--third {
+            display: none;
+
+            @media (min-width: 768px) {
+                display: flex;
+                position: absolute;
+                top: 80%;
+                left: 0;
+                min-height: 7.5rem;
+                max-height: 7.5rem;
+                width: 100%;
+            }
+        }
+    }
+
+    &__match {
+        display: flex;
+        width: 100%;
+        background: rgba(@greyDarkest, 50%);
+        border: 2px solid @primary;
+        border-radius: 0.1em;
+        outline: none;
+        min-height: 7.5rem;
+        max-height: 7.5rem;
+
+        &:before, &:after {
+            position: absolute;
+            // left: -2.5rem;
+            z-index: 1;
+            content: '';
+            display: block;
+            width: 1.5rem;
+            
+            .playoffs__column__left &{
+                border-left: 2px solid @primary-light;
+                left: -1.5rem;
+            }
+
+            .playoffs__column__right &{
+                border-right: 2px solid @primary-light;
+                right: -1.5rem;
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &__qf:before, &__qf:after {
+            height: 4vh;
+        }
+
+        &__sf:before, &__sf:after {
+            height: 9vh;
+        }
+
+        &__f:before, &__f:after {
+            height: 18vh;
+        }
+
+        &:before {
+            bottom: 50%;
+            border-bottom: 2px solid @primary-light;
+            transform: translate(0, 1px);
+
+            .playoffs__item--final &{
+                display: none;
+            }
+        }
+
+        &:after {
+            top: 50%;
+            border-top: 2px solid @primary-light;
+            transform: translate(0, -1px);
+
+            .playoffs__item--final &{
+                display: none;
+            }
+        }
+    }
+
+    &__table {
+        border-collapse: collapse;
+        margin: 0;
+        width: 100%;
+        display: table;
+
+        @media(min-width: 768px) {
+
+        }
+
+        &__f::before {
+            display: none; 
+
+            @media(min-width: 768px) { 
+                position: absolute;
+                top: 50%;
+                left: -3rem;
+                content: '';
+                display: block;
+                width: 3rem;
+                height: 2px;
+                background-color: @primary-light;
+                transform: translate(0, -1px);
+            }
+        }
+
+        &__f::after {
+            display: none;
+
+            @media(min-width: 768px) { 
+                position: absolute;
+                top: 50%;
+                right: -3rem;
+                content: '';
+                display: block;
+                width: 3rem;
+                height: 2px;
+                background-color: @primary-light;
+                transform: translate(0, -1px);
+            }
+        }
+    }
+
+    &__tr{
+        &:first-child .playoffs__td {
+            border-top: 0;
+        }
+
+        &:last-child .playoffs__td {
+            border-bottom: 0;
+        }
+
+        &__win {
+            background-color: rgba(@primary, 30%);
+            td {
+                font-weight: 700;
+            }
+        }
+
+        &__lose {
+            td:first-child {
+                text-decoration: line-through;
+            }
+        }
+    }
+
+    &__td {
+        padding: 0 1rem;
+        border: 1px solid @primary-light;
+        color: @white;
+        font-size: 1.3rem;
+        display: table-cell;
+        vertical-align: middle;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 10rem;
+
+        &:first-child {
+            border-left: 0;
+            width: 80%;
+        }
+
+        &:last-child {
+            border-right: 0;
+            width: 20%;
+            text-align: center;
+        }
+    }
+}

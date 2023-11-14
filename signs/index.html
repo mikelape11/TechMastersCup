@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tech Masters Cup">
+    <meta name="keywords" content="Cup">
+    <meta name="author" content="Team Xtreme">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Masters Cup</title>
+    <link rel="icon" type="image/gif" href="../assets/images/Logo/Logo2.png">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script defer src="../assets/javascript/main.js"></script>
+    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+</head>
+<body>
+
+    <header class="header">
+
+        <a href="#home" class="header__logo" aria-label="Home">
+            <img src="../assets/images/Logo/tx.png" alt="TX" class="header__img">
+        </a>
+
+    </header>
+
+    <div class="banner">
+
+        <!-- <a class="banner__link" src="https://discord.gg/4hV68h5C" alt="">
+            <img src="../assets/images/Background/discord.png" width="50" class="banner__img">
+        </a> -->
+
+    </div>
+
+    <div class="menu">
+        <div class="menu__icon">
+            <a id="menu" class="icon--menu"></a>
+        </div>
+        <ul class="menu__ul">
+            <li class="menu__li"><a id="home" class="menu__a">Home</a></li>
+            <li class="menu__li"><a id="info" class="menu__a">Info</a></li>
+            <li class="menu__li"><a id="players" class="menu__a">Players</a></li>
+            <li class="menu__li"><a id="results" class="menu__a">Results</a></li>
+            <li class="menu__li menu__li--active"><a id="signs" class="menu__a">Signs</a></li>
+        </ul>
+    </div>
+
+    <section class="section">
+        <div class="signs">
+
+            <h2 class="signs__title">TMC Signs pack</h2>
+            <div class="signs__content">
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">logo</h2>
+                    <img src="../assets/Signs/Logo.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-logo" value="http://mikelapezetxea.com/tmc/assets/Signs/Logo.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button class="signs__button" data-clipboard-target="#tmc-logo">
+                                <span id="signSpan" class="signs__tooltiptext" data-clipboard-targer="#signInput1">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">arrow left 90</h2>
+                    <img src="../assets/Signs/Arrow90Left.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-al90" value="http://mikelapezetxea.com/tmc/assets/Signs/Arrow90Left.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button class="signs__button" data-clipboard-target="#tmc-al90">
+                                <span id="signSpan" class="signs__tooltiptext" data-clipboard-targer="#signInput1">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">arrow right 90</h2>
+                    <img src="../assets/Signs/Arrow90Right.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-ar90" value="http://mikelapezetxea.com/tmc/assets/Signs/Arrow90Right.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-ar90" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">arrow left 180</h2>
+                    <img src="../assets/Signs/Arrow180Left.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-al180" value="http://mikelapezetxea.com/tmc/assets/Signs/Arrow180Left.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-al180" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">arrow right 180</h2>
+                    <img src="../assets/Signs/Arrow180Right.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-ar180" value="http://mikelapezetxea.com/tmc/assets/Signs/Arrow180Right.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-ar180" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">arrow down</h2>
+                    <img src="../assets/Signs/ArrowDown.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-ad" value="http://mikelapezetxea.com/tmc/assets/Signs/ArrowDown.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-ad" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">arrow down left</h2>
+                    <img src="../assets/Signs/ArrowDownLeft.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-adl" value="http://mikelapezetxea.com/tmc/assets/Signs/ArrowDownLeft.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-adl" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">arrow down right</h2>
+                    <img src="../assets/Signs/ArrowDownRight.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-adr" value="http://mikelapezetxea.com/tmc/assets/Signs/ArrowDownRight.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-adr" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">arrow left</h2>
+                    <img src="../assets/Signs/ArrowLeft.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-al" value="http://mikelapezetxea.com/tmc/assets/Signs/ArrowLeft.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-al" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">arrow right</h2>
+                    <img src="../assets/Signs/ArrowRight.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-ar" value="http://mikelapezetxea.com/tmc/assets/Signs/ArrowRight.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-ar" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">arrow up</h2>
+                    <img src="../assets/Signs/ArrowUp.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-au" value="http://mikelapezetxea.com/tmc/assets/Signs/ArrowUp.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-au" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">arrow up left</h2>
+                    <img src="../assets/Signs/ArrowUpLeft.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-aul" value="http://mikelapezetxea.com/tmc/assets/Signs/ArrowUpLeft.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-aul" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">arrow up right</h2>
+                    <img src="../assets/Signs/ArrowUpRight.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-aup" value="http://mikelapezetxea.com/tmc/assets/Signs/ArrowUpRight.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-aup" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">double arrow down</h2>
+                    <img src="../assets/Signs/DoubleArrowDown.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-dad" value="http://mikelapezetxea.com/tmc/assets/Signs/DoubleArrowDown.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-dad" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">double arrow left</h2>
+                    <img src="../assets/Signs/DoubleArrowDownLeft.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-dadl" value="http://mikelapezetxea.com/tmc/assets/Signs/DoubleArrowDownLeft.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-dadl" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">double arrow down right</h2>
+                    <img src="../assets/Signs/DoubleArrowDownRight.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-dadr" value="http://mikelapezetxea.com/tmc/assets/Signs/DoubleArrowDownRight.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-dadr" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">double arrow left</h2>
+                    <img src="../assets/Signs/DoubleArrowLeft.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-dal" value="http://mikelapezetxea.com/tmc/assets/Signs/DoubleArrowLeft.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-dal" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">double arrow right</h2>
+                    <img src="../assets/Signs/DoubleArrowRight.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-dar" value="http://mikelapezetxea.com/tmc/assets/Signs/DoubleArrowRight.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-dar" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">double arrow up</h2>
+                    <img src="../assets/Signs/DoubleArrowUp.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-dau" value="http://mikelapezetxea.com/tmc/assets/Signs/DoubleArrowUp.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-dau" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">double arrow up left</h2>
+                    <img src="../assets/Signs/DoubleArrowUpLeft.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-daul" value="http://mikelapezetxea.com/tmc/assets/Signs/DoubleArrowUpLeft.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-daul" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">double arrow up right</h2>
+                    <img src="../assets/Signs/DoubleArrowUpRight.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-daur" value="http://mikelapezetxea.com/tmc/assets/Signs/DoubleArrowUpRight.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-daur" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">warn</h2>
+                    <img src="../assets/Signs/Warn.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-w" value="http://mikelapezetxea.com/tmc/assets/Signs/Warn.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-w" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signs__item">
+                    <h2 class="signs__item__title">wrong way</h2>
+                    <img src="../assets/Signs/WrongWay.jpg" alt="sign" class="signs__img">
+                    <div class="signs__footer">
+                        <input type="text" id="tmc-ww" value="http://mikelapezetxea.com/tmc/assets/Signs/WrongWay.jpg" class="signs__input" readonly>
+
+                        <div class="signs__tooltip">
+                            <button id="signButton" data-clipboard-target="#tmc-ww" class="signs__button">
+                                <span id="signSpan" class="signs__tooltiptext">Copied to clipboard</span>
+                                copy</button>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <span class="footer__copy">© Team Xtreme</span>
+        <span class="footer__copy">Designed by Belako</span>
+    </footer>
+
+</body>
+</html>
